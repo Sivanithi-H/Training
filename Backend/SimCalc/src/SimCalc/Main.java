@@ -6,7 +6,9 @@ public class Main {
         opr.printWelcome();
         opr.option();
         opr.validOperation();
+//        opr.setOperator();
+        opr.setOption();
         opr.InsertVal();
-        opr.callOper();
+        opr.callOpera();
     }
 }
