@@ -5,14 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c62e9ec8-2e23-4df4-a9bd-cf1d47223af7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../CALCULATOR/src/CALCULATOR.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimCalc/Addition.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Addition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimCalc/CalcOper.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/CalcOper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimCalc/Divition.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Division.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimCalc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Sample/src/sample1.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Addition.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/CalcOper.java" beforeDir="false" />
