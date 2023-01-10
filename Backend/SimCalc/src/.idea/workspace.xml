@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c62e9ec8-2e23-4df4-a9bd-cf1d47223af7" name="Changes" comment="&quot;Java&quot;">
+      <change afterPath="$PROJECT_DIR$/../../CALCULATOR/src/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../maven/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CALCULATOR/src/calculator/Divition.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CALCULATOR/src/calculator/Division.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CALCULATOR/src/calculator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CALCULATOR/src/calculator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CALCULATOR/src/calculator/calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CALCULATOR/src/calculator/calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimCalc/Addition.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Addition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimCalc/CalcOper.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/CalcOper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimCalc/CalcOper.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/CalcOpera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimCalc/Division.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Division.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimCalc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimCalc/Multiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Multiplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimCalc/Subtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Subtraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Addition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Addition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/CalcOper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/CalcOper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Division.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Division.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Multiplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Multiplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Subtraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Subtraction.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",

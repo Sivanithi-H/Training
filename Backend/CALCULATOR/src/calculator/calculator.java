@@ -21,7 +21,6 @@ public class calculator implements Test {
         System.out.println("2. SUB");
         System.out.println("3. MUL");
         System.out.println("4. DIV");
-
     }
 
     public void getOption() {
@@ -35,6 +34,11 @@ public class calculator implements Test {
     }
 
     @Override
+    public void doOperation() {
+
+    }
+
+    @Override
     public void checkExceptionInOption() {
         try {
             setOperation();
@@ -44,8 +48,13 @@ public class calculator implements Test {
         }
     }
 
+    @Override
+    public void checkExceptionOnNumbers() {
+
+    }
+
     public void setOperation() {
-        operation = operations[option - 1];
+        operation = operations [option - 1];
     }
 
     public void getNumbers() {
@@ -53,11 +62,11 @@ public class calculator implements Test {
         value1 = sc.nextInt();
         System.out.println("Enter value2 : ");
         value2 = sc.nextInt();
-        FunCall();
+        operationCalling();
     }
 
-    public void FunCall() {
-        System.out.println("Function Call :" + operation);
+    public void operationCalling() {
+//        System.out.println("Function Call :" + operation);
         switch (operation) {
             case '+':
                 Addition add = new Addition(value1, value2);
@@ -75,19 +84,11 @@ public class calculator implements Test {
                 mul.printAns();
                 break;
             case '/':
-                Divition div = new Divition(value1, value2);
+                Division div = new Division(value1, value2);
                 div.checkExceptionOnNumbers();
                 div.doOperation();
                 div.printAns();
                 break;
-
         }
-    }
-
-    @Override
-    public void checkExceptionOnNumbers() {
-    }
-
-    public void doOperation() {
     }
 }

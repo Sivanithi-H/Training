@@ -1,11 +1,11 @@
 package calculator;
 
-public class Divition extends calculator {
+public class Division extends calculator {
     private int value1;
     private int value2;
     private int result;
 
-    public Divition(int value1,int value2) {
+    public Division(int value1, int value2) {
         this.value1 = value1;
         this.value2 = value2;
     }
@@ -14,9 +14,9 @@ public class Divition extends calculator {
     public void checkExceptionOnNumbers() {
         try {
             doOperation();
-            System.out.println(value1 + " " +value2);
+            System.out.println(value1 + "/" +value2);
         } catch(ArithmeticException e) {
-            System.out.println("Divition by zero" );
+            System.out.println("Division by zero" );
             super.setOption(4);
             super.setOperation();
             super.getNumbers();

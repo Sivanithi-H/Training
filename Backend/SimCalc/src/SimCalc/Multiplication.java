@@ -1,6 +1,6 @@
 package SimCalc;
 
-public class Multiplication extends CalcOper {
+public class Multiplication extends CalcOpera {
     private int value1;
     private int value2;
     private int result;

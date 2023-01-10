@@ -1,6 +1,6 @@
 package SimCalc;
 
-public class Addition extends CalcOper{
+public class Addition extends CalcOpera {
     private int value1;
     private int value2;
     private int result;

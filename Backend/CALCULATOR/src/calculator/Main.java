@@ -5,9 +5,8 @@ public class Main {
         calculator cal = new calculator();
         cal.welcomeMessage();
         cal.showOption();
-//        cal.setOption();
         cal.setOperation();
         cal.getNumbers();
-        cal.FunCall();
+        cal.operationCalling();
     }
 }

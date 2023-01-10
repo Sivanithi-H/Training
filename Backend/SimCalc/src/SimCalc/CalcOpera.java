@@ -2,13 +2,11 @@ package SimCalc;
 
 import java.util.Scanner;
 
-public class CalcOper {
+public class CalcOpera {
     Scanner sc = new Scanner(System.in);
     private int value1;
     private int value2;
-
     private int option;
-
     private char operator;
     private char[] operations = {'+','-','*','/'};
     public void printWelcome() {

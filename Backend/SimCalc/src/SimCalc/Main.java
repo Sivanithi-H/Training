@@ -2,7 +2,7 @@ package SimCalc;
 
 public class Main {
     public static void main(String[] args) {
-        CalcOper opr = new CalcOper();
+        CalcOpera opr = new CalcOpera();
         opr.printWelcome();
         opr.displayOperation();
         opr.validOperation();

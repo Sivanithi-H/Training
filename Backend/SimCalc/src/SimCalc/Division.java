@@ -1,6 +1,6 @@
 package SimCalc;
 
-public class Division extends CalcOper{
+public class Division extends CalcOpera {
     private int value1;
     private int value2;
     private int result;
