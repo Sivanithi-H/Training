@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c62e9ec8-2e23-4df4-a9bd-cf1d47223af7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Sample/src/sample1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Addition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/CalcOper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Divition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Multiplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Subtraction.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../maven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimCalc/CalcOper.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/CalcOper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimCalc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Addition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Addition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/CalcOper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/CalcOper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +33,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/trustrace/S I V A/Git-Traning/Backend/SimCalc/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/trustrace/S I V A/Git-Traning/Backend/SimCalc/src&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,5 +51,16 @@
       <updated>1673103799964</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

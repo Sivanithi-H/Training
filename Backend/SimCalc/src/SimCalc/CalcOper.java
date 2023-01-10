@@ -6,22 +6,33 @@ public class CalcOper {
     Scanner sc = new Scanner(System.in);
     private double value1;
     private double value2;
+
     private int option;
+
     private int operator;
     private char[] operations = {'+','-','*','/'};
     public void printWelcome() {
         System.out.println("WELCOME....");
     }
-
-    public void option() {
+    public void displayOperation() {
         System.out.println("Select Operation :");
         System.out.println("1. Addition");
         System.out.println("2. Subtraction");
         System.out.println("3. Multiplication");
         System.out.println("4. Division");
-        option = sc.nextInt();
     }
-    public void InsertVal() {
+
+    public int getOption() {
+        option = sc.nextInt();
+        return option;
+    }
+
+    public void setOption()
+    {
+        this.option = option - 1;
+    }
+
+    public void insertVal() {
         System.out.println("Enter value1:");
         value1 = sc.nextDouble();
         System.out.println("Enter value2");
@@ -41,13 +52,9 @@ public class CalcOper {
             System.out.println("ERROR");
         }
     }
-
 //    public void setOperator() {
 //       operator = operations[option - 1];
 //    }
-    public void setOption() {
-        this.option = option - 1;
-    }
 
     public void callOpera() {
             switch (option) {
