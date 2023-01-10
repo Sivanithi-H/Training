@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_10_01_23,_11_48_am_[Changes]" date="1673331512142" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_01_23,_11_48_am_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 10/01/23, 11:48 am [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/SimCalc/SimCalc/Addition.class" />
+    <option name="AFTER_PATH" value="out/production/SimCalc/SimCalc/Addition.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_01_23,_11_48_am_[Changes]/Addition.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/SimCalc/SimCalc/CalcOper.class" />
+    <option name="AFTER_PATH" value="out/production/SimCalc/SimCalc/CalcOper.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_01_23,_11_48_am_[Changes]/CalcOper.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/SimCalc/SimCalc/Main.class" />
+    <option name="AFTER_PATH" value="out/production/SimCalc/SimCalc/Main.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_01_23,_11_48_am_[Changes]/Main.class" />
+  </binary>
+</changelist>

@@ -5,7 +5,7 @@ public class Subtraction extends CalcOper {
     private int value2;
     private int result;
 
-    public void Subtraction (int value1,int value2) {
+    public Subtraction (int value1,int value2) {
         this.value1 = value1;
         this.value2 = value2;
     }

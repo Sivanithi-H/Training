@@ -5,10 +5,8 @@ public class Main {
         CalcOper opr = new CalcOper();
         opr.printWelcome();
         opr.displayOperation();
-        opr.getOption();
         opr.validOperation();
-//        opr.setOperator();
-        opr.setOption();
+        opr.setOperator();
         opr.insertVal();
         opr.callOpera();
     }
