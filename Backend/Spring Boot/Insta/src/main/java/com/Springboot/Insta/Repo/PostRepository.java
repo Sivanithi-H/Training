@@ -10,12 +10,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class PostRepository {
+public class PostRepository implements QueryImplement{
     @Autowired
     MongoTemplate mongoTemplate;
 
     public void createPost(String userId, String imageUrl) {
-        mongoTemplate.save(userId, imageUrl);
+        mongoTemplate.save(new Post(userId, imageUrl));
     }
 
     public Post getPostById(String postId) {
@@ -27,15 +27,18 @@ public class PostRepository {
     }
 
     public List<Post> getAllPost(String pageNumber, String pageSize) {
-
+        return mongoTemplate.find(
+                new Query().skip((long) Integer.parseInt(pageNumber) * Integer.parseInt(pageSize))
+                        .limit(Integer.parseInt(pageSize)), Post.class);
     }
 
     public List<Post> getAllPostOfUser(String userId, String pageNumber, String pageSize) {
-
+        return mongoTemplate.find(getQueryForPostId(userId)
+                .skip( (long) Integer.parseInt(pageNumber) * Integer.parseInt(pageSize))
+                .limit(Integer.parseInt(pageSize)), Post.class);
     }
 
     public void deleteAllPostOfUser(String userId) {
+        mongoTemplate.remove(getQueryForUserId(userId), Post.class);
     }
-
-    implement
 }

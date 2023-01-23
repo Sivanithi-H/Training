@@ -12,18 +12,18 @@ import java.util.Date;
 @Document (collection = "Post")
 public class Post {
 
-    private String profileId;
+    private String userId;
     @Id
     private String postId;
     private String imageUrl;
     private Date updateDateAndTime;
 
-    public Post(String profileId, String postId, String imageUrl, long updateDateAndTime) {
-        this.profileId = profileId;
-        this.postId = postId;
+    public Post(String userId, String imageUrl) {
+        this.userId = userId;
         this.imageUrl = imageUrl;
         this.updateDateAndTime = new Date();
     }
+
 
 
 }

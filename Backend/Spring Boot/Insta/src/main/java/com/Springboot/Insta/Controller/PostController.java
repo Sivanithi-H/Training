@@ -21,7 +21,7 @@ public class PostController {
 
     @GetMapping("{postId}")
     public Post getPostById(@PathVariable String postId) throws Exception {
-        return postService.getPostById(postId);
+        return postService.getPostByAnId(postId);
     }
 
     @GetMapping("getAllPost")

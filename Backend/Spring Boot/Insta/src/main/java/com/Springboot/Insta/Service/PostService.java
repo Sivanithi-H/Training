@@ -24,9 +24,9 @@ public class PostService {
         postRepository.createPost(userId, imageUrl);
     }
 
-    public Post getPostById(String postId) throws Exception {
+    public Post getPostByAnId(String postId) throws Exception {
         postValidator.isPostExist(postId);
-        postRepository.getPostById(postId);
+        return postRepository.getPostById(postId);
     }
 
     public void deletePost(String postId) throws Exception {
@@ -36,7 +36,7 @@ public class PostService {
 
     public void deleteAllPostByUser(String userId) throws Exception {
         idAndNameValidator.isIdExist(userId);
-        postRepository.deleteAllPostOfUSer(userId);
+        postRepository.deleteAllPostOfUser(userId);
     }
 
     public List<Post> getAllPost(String pageNumber, String pageSize) {
@@ -48,6 +48,6 @@ public class PostService {
     }
 
     public void deleteAllPostOfUser(String userId) {
-        return postRepository.deleteAllPostOfUser(userId);
+        postRepository.deleteAllPostOfUser(userId);
     }
 }
