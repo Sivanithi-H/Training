@@ -12,6 +12,12 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    @PostMapping("/createUser")
+    public String createUser(@RequestBody UserProfile newUser) throws Exception {
+        userService.createUser(newUser);
+        return "UserProfile created";
+    }
+
     @GetMapping("/id/{userId}")
     public UserProfile getOneUserById(@PathVariable String userId) throws Exception {
         return userService.getOneUserId(userId);
@@ -20,12 +26,6 @@ public class UserController {
     @GetMapping("/{name}")
     public UserProfile getOneUserByName(@PathVariable String name) throws Exception{
         return userService.getOneUserName(name);
-    }
-
-    @PostMapping("/createUser")
-    public String createUser(@RequestBody UserProfile newUser) throws Exception {
-        userService.createUser(newUser);
-        return "UserProfile created";
     }
 
     @DeleteMapping("delete/{userId}")

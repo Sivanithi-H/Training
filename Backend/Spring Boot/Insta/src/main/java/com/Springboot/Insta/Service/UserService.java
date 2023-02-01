@@ -37,10 +37,6 @@ public class UserService {
         userRepo.createUser(newUser);
     }
 
-//    public void followUser(String userId, String idToFollow) {
-//
-//    }
-
     public void deleteUser(String userId) throws Exception {
         idAndNameValidator.isIdExist(userId);
         userRepo.deleteUser(userId);

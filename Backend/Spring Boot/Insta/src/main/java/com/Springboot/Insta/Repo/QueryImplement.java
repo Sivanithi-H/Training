@@ -1,7 +1,5 @@
 package com.Springboot.Insta.Repo;
 
-import org.springframework.beans.CachedIntrospectionResults;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
