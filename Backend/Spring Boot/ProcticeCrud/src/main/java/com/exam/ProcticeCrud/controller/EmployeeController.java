@@ -1,9 +1,8 @@
 package com.exam.ProcticeCrud.controller;
 
-import com.exam.ProcticeCrud.ResponseStatus.ResourceNotFoundException;
+import com.exam.ProcticeCrud.Exception.ResourceNotFoundException;
 import com.exam.ProcticeCrud.pojo.Employee;
 import com.exam.ProcticeCrud.repository.EmployeeRepository;
-import com.exam.ProcticeCrud.service.EmpoyeeService;
 import com.exam.ProcticeCrud.service.SequenceGeneratorService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

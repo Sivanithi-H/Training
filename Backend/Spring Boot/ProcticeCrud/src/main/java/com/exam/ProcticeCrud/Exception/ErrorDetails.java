@@ -1,4 +1,4 @@
-package com.exam.ProcticeCrud.pojo;
+package com.exam.ProcticeCrud.Exception;
 
 import lombok.Data;
 

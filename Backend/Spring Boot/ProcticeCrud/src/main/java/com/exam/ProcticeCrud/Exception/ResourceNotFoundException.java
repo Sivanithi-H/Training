@@ -1,4 +1,4 @@
-package com.exam.ProcticeCrud.ResponseStatus;
+package com.exam.ProcticeCrud.Exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

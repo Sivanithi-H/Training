@@ -1,6 +1,5 @@
-package com.exam.ProcticeCrud.ResponseStatus;
+package com.exam.ProcticeCrud.Exception;
 
-import com.exam.ProcticeCrud.pojo.ErrorDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
