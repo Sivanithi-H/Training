@@ -1,6 +1,10 @@
 package com.example.emailVerificationSystem.service;
 
-public class EmailService {
+import com.example.emailVerificationSystem.pojo.EmailDetails;
 
+public interface EmailService {
 
+    String sendSimpleMail(EmailDetails details);
+
+    String sendMailWithAttachment(EmailDetails details);
 }
