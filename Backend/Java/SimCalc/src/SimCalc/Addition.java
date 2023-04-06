@@ -1,16 +1,16 @@
 package SimCalc;
 
 public class Addition extends CalcOpera {
-    private int value1;
-    private int value2;
+    private int a;
+    private int b;
     private int result;
 
-    public Addition (int value1,int value2) {
-        this.value1 = value1;
-        this.value2 = value2;
+    public Addition (int a,int b) {
+        this.a = a;
+        this.b = b;
     }
     protected void getAdd() {
-        result = value1 + value2;
+        result = a  + b;
     }
 
     protected void getResult() {

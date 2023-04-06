@@ -1,0 +1,273 @@
+Index: SimCalc/CalcOper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package SimCalc;\n\nimport java.util.Scanner;\n\npublic class CalcOper {\n    Scanner sc = new Scanner(System.in);\n    private double value1;\n    private double value2;\n    private int option;\n    private int operator;\n    private char[] operations = {'+','-','*','/'};\n    public void printWelcome() {\n        System.out.println(\"WELCOME....\");\n    }\n\n    public void option() {\n        System.out.println(\"Select Operation :\");\n        System.out.println(\"1. Addition\");\n        System.out.println(\"2. Subtraction\");\n        System.out.println(\"3. Multiplication\");\n        System.out.println(\"4. Division\");\n        option = sc.nextInt();\n    }\n    public void InsertVal() {\n        System.out.println(\"Enter value1:\");\n        value1 = sc.nextDouble();\n        System.out.println(\"Enter value2\");\n        value2 = sc.nextDouble();\n    }\n\n    public void validOperation() {\n        if (option==1) {\n            System.out.println(\"VALID\");\n        } else if (option==2) {\n            System.out.println(\"VALID\");\n        } else if (option==3) {\n            System.out.println(\"VALID\");\n        } else if (option==4) {\n            System.out.println(\"VALID\");\n        } else if (option>4) {\n            System.out.println(\"ERROR\");\n        }\n    }\n\n//    public void setOperator() {\n//       operator = operations[option - 1];\n//    }\n    public void setOption() {\n        this.option = option - 1;\n    }\n\n    public void callOpera() {\n            switch (option) {\n                case 0:\n                    Addition add = new Addition();\n                    add.getAdd();\n                    add.getResult();\n                    break;\n                case 1:\n                    Subtraction sub = new Subtraction();\n                    sub.getSub();\n                    sub.getResult();\n                    break;\n                case 2:\n                    Multiplication mul = new Multiplication();\n                    mul.getMul();\n                    mul.getResult();\n                    break;\n                case 3:\n                    Division div = new Division();\n                    div.getDiv();\n                    div.getResult();\n                    break;\n                default:\n                    System.out.println(\"INVALID OPERATOR\");\n                    break;\n            }\n            sc.close();\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SimCalc/CalcOper.java b/SimCalc/CalcOper.java
+--- a/SimCalc/CalcOper.java	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ b/SimCalc/CalcOper.java	(date 1673331143072)
+@@ -6,22 +6,33 @@
+     Scanner sc = new Scanner(System.in);
+     private double value1;
+     private double value2;
++
+     private int option;
++
+     private int operator;
+     private char[] operations = {'+','-','*','/'};
+     public void printWelcome() {
+         System.out.println("WELCOME....");
+     }
+-
+-    public void option() {
++    public void displayOperation() {
+         System.out.println("Select Operation :");
+         System.out.println("1. Addition");
+         System.out.println("2. Subtraction");
+         System.out.println("3. Multiplication");
+         System.out.println("4. Division");
++    }
++
++    public int getOption() {
+         option = sc.nextInt();
++        return option;
+     }
+-    public void InsertVal() {
++
++    public void setOption()
++    {
++        this.option = option - 1;
++    }
++
++    public void insertVal() {
+         System.out.println("Enter value1:");
+         value1 = sc.nextDouble();
+         System.out.println("Enter value2");
+@@ -41,13 +52,9 @@
+             System.out.println("ERROR");
+         }
+     }
+-
+ //    public void setOperator() {
+ //       operator = operations[option - 1];
+ //    }
+-    public void setOption() {
+-        this.option = option - 1;
+-    }
+ 
+     public void callOpera() {
+             switch (option) {
+Index: SimCalc/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package SimCalc;\n\npublic class Main {\n    public static void main(String[] args) {\n        CalcOper opr = new CalcOper();\n        opr.printWelcome();\n        opr.option();\n        opr.validOperation();\n//        opr.setOperator();\n        opr.setOption();\n        opr.InsertVal();\n        opr.callOpera();\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SimCalc/Main.java b/SimCalc/Main.java
+--- a/SimCalc/Main.java	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ b/SimCalc/Main.java	(date 1673330688915)
+@@ -4,11 +4,12 @@
+     public static void main(String[] args) {
+         CalcOper opr = new CalcOper();
+         opr.printWelcome();
+-        opr.option();
++        opr.displayOperation();
++        opr.getOption();
+         opr.validOperation();
+ //        opr.setOperator();
+         opr.setOption();
+-        opr.InsertVal();
++        opr.insertVal();
+         opr.callOpera();
+     }
+ }
+\ No newline at end of file
+Index: ../../../SimCalc/src/SimCalc/CalcOper.java
+===================================================================
+diff --git a/../../../SimCalc/src/SimCalc/CalcOper.java b/../../../SimCalc/src/SimCalc/CalcOper.java
+deleted file mode 100644
+--- a/../../../SimCalc/src/SimCalc/CalcOper.java	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ /dev/null	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
+@@ -1,4 +0,0 @@
+-package SimCalc;
+-
+-public class Operation {
+-}
+Index: ../../../SimCalc/src/SimCalc/Divition.java
+===================================================================
+diff --git a/../../../SimCalc/src/SimCalc/Divition.java b/../../../SimCalc/src/SimCalc/Divition.java
+deleted file mode 100644
+--- a/../../../SimCalc/src/SimCalc/Divition.java	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ /dev/null	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
+@@ -1,2 +0,0 @@
+-package SimCalc;public class Divition {
+-}
+Index: ../../../SimCalc/src/SimCalc/Subtraction.java
+===================================================================
+diff --git a/../../../SimCalc/src/SimCalc/Subtraction.java b/../../../SimCalc/src/SimCalc/Subtraction.java
+deleted file mode 100644
+--- a/../../../SimCalc/src/SimCalc/Subtraction.java	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ /dev/null	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
+@@ -1,2 +0,0 @@
+-package SimCalc;public class Subtraction {
+-}
+Index: ../../../SimCalc/src/SimCalc/Addition.java
+===================================================================
+diff --git a/../../../SimCalc/src/SimCalc/Addition.java b/../../../SimCalc/src/SimCalc/Addition.java
+deleted file mode 100644
+--- a/../../../SimCalc/src/SimCalc/Addition.java	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ /dev/null	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
+@@ -1,2 +0,0 @@
+-package SimCalc;public class Addition {
+-}
+Index: ../../../SimCalc/src/SimCalc/Multiplication.java
+===================================================================
+diff --git a/../../../SimCalc/src/SimCalc/Multiplication.java b/../../../SimCalc/src/SimCalc/Multiplication.java
+deleted file mode 100644
+--- a/../../../SimCalc/src/SimCalc/Multiplication.java	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ /dev/null	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
+@@ -1,4 +0,0 @@
+-package SimCalc;
+-
+-public class Mlultiplication {
+-}
+Index: ../../../Sample/src/sample1.java
+===================================================================
+diff --git a/../../../Sample/src/sample1.java b/../../../Sample/src/sample1.java
+deleted file mode 100644
+--- a/../../../Sample/src/sample1.java	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ /dev/null	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
+@@ -1,2 +0,0 @@
+-public class sample1 {
+-}
+Index: ../../maven/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../maven/pom.xml b/../../maven/pom.xml
+new file mode 100644
+--- /dev/null	(date 1673321693084)
++++ b/../../maven/pom.xml	(date 1673321693084)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>org.example</groupId>
++    <artifactId>maven</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <properties>
++        <maven.compiler.source>19</maven.compiler.source>
++        <maven.compiler.target>19</maven.compiler.target>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++    </properties>
++
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"c62e9ec8-2e23-4df4-a9bd-cf1d47223af7\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/../../../Sample/src/sample1.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Addition.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/CalcOper.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Divition.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Multiplication.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Subtraction.java\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/../../..\" />\n  </component>\n  <component name=\"HighlightingSettingsPerFile\">\n    <setting file=\"file://$PROJECT_DIR$/SimCalc/Subtraction.java\" root0=\"SKIP_HIGHLIGHTING\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2K0FsILilTAmj6OMHY9A1uPKCVh\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"last_opened_file_path\": \"/home/trustrace/S I V A/Git-Traning/Backend/SimCalc/src\"\n  }\n}]]></component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"c62e9ec8-2e23-4df4-a9bd-cf1d47223af7\" name=\"Changes\" comment=\"\" />\n      <created>1673103799964</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1673103799964</updated>\n    </task>\n    <servers />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ b/.idea/workspace.xml	(date 1673331470313)
+@@ -5,6 +5,14 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="c62e9ec8-2e23-4df4-a9bd-cf1d47223af7" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/../../maven/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SimCalc/CalcOper.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/CalcOper.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/SimCalc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Addition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Addition.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/CalcOper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/CalcOper.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimCalc/SimCalc/Main.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../../../Sample/src/sample1.java" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Addition.java" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/CalcOper.java" beforeDir="false" />
+@@ -31,14 +39,14 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "last_opened_file_path": "/home/trustrace/S I V A/Git-Traning/Backend/SimCalc/src"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/home/trustrace/S I V A/Git-Traning/Backend/SimCalc/src&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+Index: out/production/SimCalc/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"c62e9ec8-2e23-4df4-a9bd-cf1d47223af7\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/SimCalc/Addition.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/SimCalc/Addition.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/SimCalc/CalcOper.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/SimCalc/CalcOper.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../Sample/src/sample1.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Addition.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/CalcOper.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Divition.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Multiplication.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Subtraction.java\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/../../..\" />\n  </component>\n  <component name=\"HighlightingSettingsPerFile\">\n    <setting file=\"file://$PROJECT_DIR$/SimCalc/Subtraction.java\" root0=\"SKIP_HIGHLIGHTING\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2K0FsILilTAmj6OMHY9A1uPKCVh\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/trustrace/S I V A/Git-Traning/Backend/SimCalc/src&quot;\n  }\n}</component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"c62e9ec8-2e23-4df4-a9bd-cf1d47223af7\" name=\"Changes\" comment=\"\" />\n      <created>1673103799964</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1673103799964</updated>\n    </task>\n    <servers />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/SimCalc/.idea/workspace.xml b/out/production/SimCalc/.idea/workspace.xml
+--- a/out/production/SimCalc/.idea/workspace.xml	(revision 71782ec55d5f86c69a648b9bef34268e249b8f8f)
++++ b/out/production/SimCalc/.idea/workspace.xml	(date 1673329944283)
+@@ -1,10 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+     <list default="true" id="c62e9ec8-2e23-4df4-a9bd-cf1d47223af7" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/SimCalc/Addition.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/Addition.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/SimCalc/CalcOper.java" beforeDir="false" afterPath="$PROJECT_DIR$/SimCalc/CalcOper.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../../../Sample/src/sample1.java" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/Addition.java" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/../../../SimCalc/src/SimCalc/CalcOper.java" beforeDir="false" />
+@@ -23,18 +23,22 @@
+   <component name="HighlightingSettingsPerFile">
+     <setting file="file://$PROJECT_DIR$/SimCalc/Subtraction.java" root0="SKIP_HIGHLIGHTING" />
+   </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ProjectId" id="2K0FsILilTAmj6OMHY9A1uPKCVh" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/home/trustrace/S I V A/Git-Traning/Backend/SimCalc/src&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "last_opened_file_path": "/home/trustrace/S I V A/Git-Traning/Backend/SimCalc/src"
+   }
+-}</component>
++}]]></component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
