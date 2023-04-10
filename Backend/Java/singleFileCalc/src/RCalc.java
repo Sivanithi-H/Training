@@ -5,8 +5,10 @@ public class RCalc {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         int option;
-        while (true) {
+        boolean con = true;
+        while (con) {
             int result = 0;
+            con = false;
             System.out.println("Enter Option :" );
             System.out.println("1. Addition");
             System.out.println("2. Subtraction");
@@ -21,18 +23,23 @@ public class RCalc {
                 int b = sc.nextInt();
                 if (option == 1) {
                     result = a + b;
+//                    con = false;
                 }
                 if (option == 2) {
                     result = a - b;
+//                    con = false;
                 }
                 if (option == 3) {
                     result = a * b;
+//                    con = false;
                 }
                 if (option == 4) {
                     try {
                         result = a / b;
+//                        con = false;
                     }catch (ArithmeticException e) {
                         System.out.println("Error : " + e.getMessage());
+                        con = true;
                     }
                 }
             }else {
