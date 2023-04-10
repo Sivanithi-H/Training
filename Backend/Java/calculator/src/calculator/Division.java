@@ -16,8 +16,8 @@ public class Division extends CalOper {
             result = value1 / value2;
             System.out.println("Result : " +result);
         }catch(ArithmeticException e) {
-            System.out.println("Division by zero");
-            insertVal();
+//            System.out.println("Division by zero");
+            System.out.println(e.getMessage());
         }
     }
 }
