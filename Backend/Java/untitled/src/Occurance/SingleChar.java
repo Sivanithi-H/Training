@@ -11,7 +11,6 @@ public class SingleChar {
                 count++;
             }
         }
-
 //        long count = name.chars()
 //                        .filter(c -> c == fWord).count();
         System.out.println("Occurrences of " + fWord + " are " + count);
