@@ -37,7 +37,7 @@ public class StudentRepository {
         update.set("description", student.getPhoneNumber());
         mongoTemplate.findAndModify(query, update, Student.class);
     }
-
+x
     public List<Student> getAllStudentPaginated(String pageNumber, String pageSize) {
         Query query = new Query().skip(Integer.parseInt(pageNumber) * Integer.parseInt(pageSize)).limit(Integer.parseInt(pageSize));
         return mongoTemplate.find(query, Student.class);

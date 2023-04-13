@@ -41,8 +41,8 @@ public class StudentController {
         return "Student deleted";
     }
     @PutMapping("/update")
-    public String update(@RequestBody Student Student) {
-        stuService.update(Student);
+    public String update(@RequestBody Student student) {
+        stuService.update(student);
         return "Student updated";
     }
 }
