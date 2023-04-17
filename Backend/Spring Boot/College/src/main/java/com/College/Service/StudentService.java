@@ -32,7 +32,7 @@ public class StudentService {
         studentRepository.delete(id);
     }
     
-    public void update(Student student, String stuId) {
+    public void update(Student student) {
         studentRepository.update(student);
     }
 }

@@ -5,6 +5,8 @@ import com.tt.login.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class StudentController {
 
@@ -21,6 +23,11 @@ public class StudentController {
         return stuService.getStuById(stuId);
     }
 
+    @GetMapping("/viewAll")
+    public List<Student> getAllStudent(@RequestParam String pageNumber, @RequestParam String pageSize) {
+        return stuService.showAllStudent(pageNumber, pageSize);
+    }
+
     @PostMapping("/create")
     public String createStudent(@RequestBody Student student) {
         stuService.create(student);
@@ -29,6 +36,7 @@ public class StudentController {
 
     @PutMapping("/update/{stuId}")
     public String updateStudent(@RequestBody Student student, @PathVariable String stuId) {
+        stuService.updateStu(student, stuId);
         return "Student updated";
     }
 

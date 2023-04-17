@@ -5,6 +5,8 @@ import com.tt.login.repository.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class StudentService {
 
@@ -24,6 +26,10 @@ public class StudentService {
     }
 
     public void updateStu(Student student, String stuId) {
+        stuRepo.update(student, stuId);
+    }
 
+    public List<Student> showAllStudent(String pageNumber, String pageSize) {
+        return stuRepo.viewAllStudent(pageNumber, pageSize);
     }
 }

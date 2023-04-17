@@ -33,9 +33,13 @@ public class StudentRepository {
     public void update(Student student) {
         Query query = new Query().addCriteria(Criteria.where("stuId").is(student.getStuId()));
         Update update =new Update();
+
         update.set("name", student.getName());
         update.set("description", student.getPhoneNumber());
+
+        new Update().set("name", student.getName()).set("description", student.getPhoneNumber());
         mongoTemplate.findAndModify(query, update, Student.class);
+
     }
 x
     public List<Student> getAllStudentPaginated(String pageNumber, String pageSize) {

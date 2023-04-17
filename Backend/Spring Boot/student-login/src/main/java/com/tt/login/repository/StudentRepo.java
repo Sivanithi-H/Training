@@ -5,8 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public class StudentRepo {
@@ -26,6 +28,17 @@ public class StudentRepo {
         mongoTemplate.remove(Query.query(Criteria.where("stuId").is(stuId)),Student.class);
     }
 
-    public void updateStu(Student student, String stuId) {
+    public List<Student> viewAllStudent(String pageNumber, String pageSize) {
+        Query query = new Query().skip(Integer.parseInt(pageNumber) * Integer.parseInt(pageSize)).limit(Integer.parseInt(pageSize));
+        return mongoTemplate.find(query, Student.class);
+    }
+
+    public void update(Student student, String stuId) {
+        Query query = new Query().addCriteria(Criteria.where("stuId").is(stuId));
+        Update update =new Update();
+
+        update.set("name", student.getName());
+        update.set("phoneNumber", student.getPhoneNumber());
+        mongoTemplate.updateMulti(query, update, Student.class);
     }
 }
