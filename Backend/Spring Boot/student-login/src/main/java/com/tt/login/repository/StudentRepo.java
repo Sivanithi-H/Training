@@ -39,6 +39,7 @@ public class StudentRepo {
 
         update.set("name", student.getName());
         update.set("phoneNumber", student.getPhoneNumber());
+        update.set("address", student.getAddress());
         mongoTemplate.updateMulti(query, update, Student.class);
     }
 }
