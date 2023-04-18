@@ -12,9 +12,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface CommerceMapper {
 
-    CommerceMapper INSTANCE = Mappers.getMapper(CommerceMapper.class);
-
-    @Mapping(source = "commerce.promotionCode", target = "code")
+    @Mapping(source = "promotionCode", target = "code")
     CommerceDto modelToDto(Commerce commerce);
 
     List<CommerceDto> modelToDtos(List<Commerce> commerces);
