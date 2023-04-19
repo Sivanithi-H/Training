@@ -20,7 +20,12 @@ public class CommerceController {
     @Autowired
     CommerceMapper mapper;
 
-    @PostMapping("/")
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "WELCOME";
+    }
+
+    @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public void save(@RequestBody CommerceDto dto) {
         Commerce commerce = mapper.dtoToModel(dto);

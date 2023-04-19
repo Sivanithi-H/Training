@@ -1,11 +1,9 @@
 package com.mapper.demomapper.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 
-@Getter
-@Setter
+@Data
 public class CommerceDto {
 
     @Id
