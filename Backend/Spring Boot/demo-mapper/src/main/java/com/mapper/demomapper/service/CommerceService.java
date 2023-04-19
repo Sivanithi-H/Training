@@ -4,7 +4,6 @@ import com.mapper.demomapper.entity.Commerce;
 import com.mapper.demomapper.repository.CommerceRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
