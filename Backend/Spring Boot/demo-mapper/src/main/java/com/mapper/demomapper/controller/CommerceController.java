@@ -6,6 +6,7 @@ import com.mapper.demomapper.mapper.CommerceMapper;
 import com.mapper.demomapper.service.CommerceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,11 +19,16 @@ public class CommerceController {
     CommerceService service;
 
     @Autowired
+    AuthenticationManager authenticationManager;
+    @Autowired
     CommerceMapper mapper;
 
-    @GetMapping("/welcome")
-    public String welcome() {
-        return "WELCOME";
+    public String token = "SN631";
+
+    @GetMapping("/login")
+    public String getToken() {
+        System.out.println(token);
+        return token;
     }
 
     @PostMapping("/create")
