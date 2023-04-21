@@ -15,6 +15,7 @@ public class Student {
     @Id
     private String stuId;
     private String name;
+    private int password;
     private String degree;
     private Address address;
     private String phoneNumber;

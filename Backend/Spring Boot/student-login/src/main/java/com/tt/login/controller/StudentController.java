@@ -36,35 +36,7 @@ public class StudentController {
 
     @PutMapping("/update/{stuId}")
     public String updateStudent(@RequestBody Student student, @PathVariable String stuId) {
-        stuService.upda
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    teStu(student, stuId);
+        stuService.updateStu(student, stuId);
         return "Student updated";
     }
 
