@@ -8,13 +8,13 @@ import org.springframework.data.annotation.Id;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Commerce {
+public class UserInfo {
 
     @Id
     private int id;
     private String name;
-    private String price;
-    private String promotionCode;
-    private String refId;
-    private int quantity;
+    private String password;
+    private String email;
+    private String roles;
+
 }

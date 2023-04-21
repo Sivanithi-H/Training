@@ -1,5 +1,6 @@
 package com.mapper.demomapper.controller;
 
+import com.mapper.demomapper.dto.AuthRequest;
 import com.mapper.demomapper.dto.CommerceDto;
 import com.mapper.demomapper.entity.Commerce;
 import com.mapper.demomapper.mapper.CommerceMapper;
@@ -23,12 +24,12 @@ public class CommerceController {
     @Autowired
     CommerceMapper mapper;
 
-    public String token = "SN631";
+    static public String token = "SN631";
 
     @GetMapping("/login")
-    public String getToken() {
+    public String getToken(@RequestBody AuthRequest authRequest) {
         System.out.println(token);
-        return token;
+        return authRequest.getUsername();
     }
 
     @PostMapping("/create")
