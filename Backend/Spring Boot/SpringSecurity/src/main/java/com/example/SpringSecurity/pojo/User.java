@@ -21,3 +21,9 @@ public class User {
     private String password;
     private String role;
 }
+//{
+//    "name" : "siva",
+//    "email" : "siva@gmail.com",
+//    "password" : "1234",
+//    "role" : "USER"
+//        }
