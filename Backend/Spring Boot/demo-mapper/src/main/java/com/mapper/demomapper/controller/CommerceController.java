@@ -1,13 +1,11 @@
 package com.mapper.demomapper.controller;
 
-import com.mapper.demomapper.dto.AuthRequest;
 import com.mapper.demomapper.dto.CommerceDto;
 import com.mapper.demomapper.entity.Commerce;
 import com.mapper.demomapper.mapper.CommerceMapper;
 import com.mapper.demomapper.service.CommerceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,17 +18,9 @@ public class CommerceController {
     CommerceService service;
 
     @Autowired
-    AuthenticationManager authenticationManager;
-    @Autowired
     CommerceMapper mapper;
 
     static public String token = "SN631";
-
-    @GetMapping("/login")
-    public String getToken(@RequestBody AuthRequest authRequest) {
-        System.out.println(token);
-        return authRequest.getUsername();
-    }
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
