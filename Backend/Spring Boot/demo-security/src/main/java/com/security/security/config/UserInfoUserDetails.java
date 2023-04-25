@@ -1,7 +1,6 @@
 package com.security.security.config;
 
 import com.security.security.entity.UserInfo;
-import org.apache.catalina.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
