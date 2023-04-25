@@ -29,6 +29,7 @@ public class ProductController {
     private AuthenticationManager authenticationManager;
 
     @GetMapping("/welcome")
+    @PreAuthorize("hasAuthority('ROLE_USER')")
     public String welcome() {
         return "Welcome this endpoint is not secure";
     }
@@ -39,7 +40,7 @@ public class ProductController {
     }
 
     @GetMapping("/all")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN)")
+    @PreAuthorize("hasAuthority('ROLE_USER')")
     public List<Product> getAllTheProducts() {
         return service.getProducts();
     }
