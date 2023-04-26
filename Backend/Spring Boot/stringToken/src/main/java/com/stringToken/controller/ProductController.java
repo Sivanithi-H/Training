@@ -15,10 +15,17 @@ public class ProductController {
     @Autowired
     ProductService service;
 
+    public String token = "aaa";
+
     @PostMapping("/")
     public String addProduct(@RequestBody Product product) {
         service.addProduct(product);
         return "Product Added";
+    }
+
+    @GetMapping("/token")
+    public String getToken(){
+        return token;
     }
 
     @GetMapping("/{id}")
