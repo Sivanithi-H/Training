@@ -1,36 +1,27 @@
 package com.stringToken.filter;
 
-import com.stringToken.controller.ProductController;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
 @Component
+@Slf4j
 public class AuthFilter extends OncePerRequestFilter {
 
-    @Autowired
-    ProductController controller;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String authHeader = request.getHeader("Authorization");
-        String token = null;
+        logger.info(authHeader);
         if (authHeader != null) {
-            token = controller.getToken();
-
+            logger.error("invalid token");
         }
-
-        if (SecurityContextHolder.getContext().getAuthentication() == null) {
-            if (token == authHeader) {
-//                SecurityContextHolder.getContext().setAuthentication(token);
-            }
-        }
+        filterChain.doFilter(request, response);
     }
 }

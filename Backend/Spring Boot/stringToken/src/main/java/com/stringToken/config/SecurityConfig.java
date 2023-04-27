@@ -20,10 +20,10 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/products/token").permitAll()
+                .requestMatchers("").permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/products/**")
+                .requestMatchers("**")
                 .authenticated().and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

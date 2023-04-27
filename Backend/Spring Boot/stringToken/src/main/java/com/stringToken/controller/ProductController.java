@@ -15,7 +15,7 @@ public class ProductController {
     @Autowired
     ProductService service;
 
-    public String token = "aaa";
+    public static String token = "aaa";
 
     @PostMapping("/")
     public String addProduct(@RequestBody Product product) {
